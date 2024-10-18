@@ -1,3 +1,5 @@
+"use client";
+
 import { useMemo } from "react";
 import { useIsMobile } from "@/hooks";
 import Link from "next/link";
@@ -445,7 +447,11 @@ export const Partners = () => {
   );
 
   return (
-    <div ref={ref} className="px-6 md:px-0">
+    <div
+      id="partner"
+      ref={ref}
+      className="w-full md:w-content mx-auto px-6 md:px-0"
+    >
       <h2
         className={`font-bold text-oscarActive font-['Inter'] text-[20px] md:text-[32px] text-center`}
       >

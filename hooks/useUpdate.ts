@@ -1,4 +1,6 @@
-import { useCallback, useState } from 'react';
+"use client";
+
+import { useCallback, useState } from "react";
 
 export const useUpdate = () => {
   const [, setState] = useState<number>(0);

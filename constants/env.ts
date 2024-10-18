@@ -78,6 +78,13 @@ export const OSCAR_HACKTHON_EVENT_ID = {
   [ENetwork.ZFDEV]: "e4adc0cc-947d-48a7-908b-bde29e52f0ce",
 }[BGA_ENV];
 
+export const OSCAR_CONTRIBUTION_AWARD_EVENT_ID = {
+  [ENetwork.PRODUCTION]: "72b1661e-19df-47de-b3ed-d8aaad84aba4",
+  [ENetwork.DEVELOPMENT]: "72b1661e-19df-47de-b3ed-d8aaad84aba4",
+  [ENetwork.STAGING]: "72b1661e-19df-47de-b3ed-d8aaad84aba4",
+  [ENetwork.ZFDEV]: "72b1661e-19df-47de-b3ed-d8aaad84aba4",
+}[BGA_ENV];
+
 // 黑客松申请事件
 export const HACKTHON_APPLY_EVENT_ID = {
   [ENetwork.PRODUCTION]: "38111ab6-907e-4781-b30d-bdeed52d2260",

@@ -15,6 +15,7 @@ export const OscarTitle = ({
 
   return (
     <h2
+      id="agenda"
       className={`font-bold text-oscarActive font-['Inter'] text-[20px] md:text-[32px] ${
         center ? "text-center md:text-left" : "text-left"
       }`}

@@ -1,13 +1,17 @@
-import { useEffect, useRef, useState } from 'react';
+"use client";
 
-export function useIntersectionObserver<T extends Element>(className: string, options: IntersectionObserverInit = {}) {
+import { useEffect, useRef, useState } from "react";
+
+export function useIntersectionObserver<T extends Element>(
+  className: string,
+  options: IntersectionObserverInit = {}
+) {
   const ref = useRef<T>();
   const [isVisible, setIsVisible] = useState(false);
 
-
   useEffect(() => {
     const observer = new IntersectionObserver(([entry]) => {
-      setIsVisible(entry.isIntersecting)
+      setIsVisible(entry.isIntersecting);
     }, options);
 
     if (ref.current) {
@@ -25,7 +29,7 @@ export function useIntersectionObserver<T extends Element>(className: string, op
     if (isVisible) {
       ref.current.classList.add(className);
     }
-  }, [isVisible])
+  }, [isVisible]);
 
   return ref;
 }

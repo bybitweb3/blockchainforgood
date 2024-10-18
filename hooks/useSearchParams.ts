@@ -1,9 +1,8 @@
+"use client";
+
 import { useSearchParams as useSearchParamsRoot } from "next/navigation";
 
-
 export function useSearchParams<Key extends string>() {
-  "use client";
-
   const searchParams = useSearchParamsRoot();
   const get = (key: string) => searchParams.get(key);
   const result = {} as Record<Key, string | null>;

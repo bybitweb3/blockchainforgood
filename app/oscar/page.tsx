@@ -1,15 +1,9 @@
 import { Metadata } from "next";
-import { Banner } from "./Banner";
-import { OscarIntro } from "./OscarIntro";
 import ShareBgImage from "@/assets/oscar/share-bg.jpeg";
+import { OscarWrapper } from "./wrapper";
 
 export default function Oscar() {
-  return (
-    <div>
-      <Banner />
-      <OscarIntro />
-    </div>
-  );
+  return <OscarWrapper />;
 }
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -20,6 +14,7 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     title: name,
     description: desc,
+    keywords: ["web3 Oscar", "web3.0 Oscar", "BGA Oscar"],
     twitter: {
       card: "summary_large_image",
       title: name,

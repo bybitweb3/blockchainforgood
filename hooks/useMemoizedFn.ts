@@ -1,4 +1,6 @@
-import { useMemo, useRef } from 'react';
+"use client";
+
+import { useMemo, useRef } from "react";
 
 type noop = (this: any, ...args: any[]) => any;
 
@@ -8,7 +10,6 @@ type PickFunction<T extends noop> = (
 ) => ReturnType<T>;
 
 export function useMemoizedFn<T extends noop>(fn: T) {
-
   const fnRef = useRef<T>(fn);
 
   fnRef.current = useMemo<T>(() => fn, [fn]);
