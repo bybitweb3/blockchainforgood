@@ -30,7 +30,7 @@ export const metadata: Metadata = {
       "At Blockchain for Good Alliance (BGA), we believe in the transformative potential of blockchain technology to address some of the most pressing challenges facing our society.  Our alliance serves as a collaborative hub, bringing together a diverse range of stakeholders to collectively explore, innovate and implement blockchain solutions for social good.",
     images: [
       {
-        url: "https://a.moledao.io/assets/other/bga-share.jpg",
+        url: "https://api.moledao.io/assets/other/bga-share.jpg",
         alt: "Blockchain for Good Alliance",
       },
     ],
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     siteName: "Blockchain for Good",
     images: [
       {
-        url: "https://a.moledao.io/assets/other/bga-share.jpg",
+        url: "https://api.moledao.io/assets/other/bga-share.jpg",
         alt: "Blockchain for Good Alliance",
       },
     ],

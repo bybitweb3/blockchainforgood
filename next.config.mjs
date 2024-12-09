@@ -16,7 +16,7 @@ const nextConfig = {
       },
       {
         protocol: 'https',
-        hostname: 'a.moledao.io',
+        hostname: 'api.moledao.io',
         port: '',
         pathname: '/**',
       },

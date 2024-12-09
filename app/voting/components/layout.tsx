@@ -28,7 +28,7 @@ export function Layout({
         preload="auto"
       >
         <source
-          src="https://a.moledao.io/assets/other/BGA Ceremony Animation-Background blur.webm"
+          src="https://api.moledao.io/assets/other/BGA Ceremony Animation-Background blur.webm"
           type="video/webm"
         />
       </video>

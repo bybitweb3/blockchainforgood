@@ -16,7 +16,7 @@ export const BGA_HOST_URL = {
 }[BGA_ENV];
 
 export const BASE_URL = {
-  [ENetwork.PRODUCTION]: "https://a.moledao.io",
+  [ENetwork.PRODUCTION]: "https://api.moledao.io",
   [ENetwork.DEVELOPMENT]: "https://beta.moledao.io",
   [ENetwork.STAGING]: "https://beta.moledao.io",
   [ENetwork.ZFDEV]: "http://localhost:8080",
@@ -24,7 +24,7 @@ export const BASE_URL = {
 
 // 资源的base url
 export const ASSETS_URL = {
-  [ENetwork.PRODUCTION]: "https://a.moledao.io/assets",
+  [ENetwork.PRODUCTION]: "https://api.moledao.io/assets",
   [ENetwork.DEVELOPMENT]: "https://beta.moledao.io/assets",
   [ENetwork.STAGING]: "https://beta.moledao.io/assets",
   [ENetwork.ZFDEV]: "https://beta.moledao.io/assets",
