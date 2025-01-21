@@ -2,13 +2,14 @@
 import { Analytics as AnalyticsImpl } from "@vercel/analytics/react";
 import { useEffect, useState } from "react";
 import Script from 'next/script';
+import { BGA_PROD_HOST_URL } from "@/constants";
 
 export function VercelAnalytics() {
   const [showAnalytics, setShowAnalytics] = useState(false);
 
   useEffect(() => {
     setShowAnalytics(
-      window?.location?.href?.includes("https://blockchainforgood.xyz/")
+      window?.location?.href?.includes(BGA_PROD_HOST_URL)
     );
   }, []);
 

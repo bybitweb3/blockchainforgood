@@ -1,5 +1,6 @@
 import EmailImage from "@/assets/incubation/email.png";
 import TelegramImage from "@/assets/incubation/telegram.png";
+import { BGA_EMAIL } from "@/constants";
 import Image from "next/image";
 
 export function ContactUs() {
@@ -26,7 +27,7 @@ export function ContactUs() {
           </a>
           <a
             className="inline-flex items-center justify-center gap-2"
-            href="mailto:hello@blockchainforgood.xyz"
+            href={`mailto:${BGA_EMAIL}`}
             target="_blank"
           >
             <Image

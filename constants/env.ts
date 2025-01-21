@@ -8,10 +8,13 @@ export enum ENetwork {
 export const BGA_ENV = (process.env.NEXT_PUBLIC_BGA_ENV ||
   ENetwork.PRODUCTION) as ENetwork;
 
+export const BGA_PROD_HOST_URL = "https://www.chainforgood.org";
+export const BGA_EMAIL = "hello@chainforgood.org";
+
 export const BGA_HOST_URL = {
-  [ENetwork.PRODUCTION]: "https://www.blockchainforgood.xyz",
+  [ENetwork.PRODUCTION]: BGA_PROD_HOST_URL,
   [ENetwork.DEVELOPMENT]: "http://localhost:3000",
-  [ENetwork.STAGING]: "https://test.blockchainforgood.xyz",
+  [ENetwork.STAGING]: "https://test.chainforgood.org",
   [ENetwork.ZFDEV]: "http://localhost:3000",
 }[BGA_ENV];
 

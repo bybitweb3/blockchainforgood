@@ -7,6 +7,7 @@ import { SWRProvider } from "./swr-provider";
 import type { Viewport } from "next";
 import { RouterProcess } from "./router-process";
 import { Toaster } from "@/components/ui/sonner";
+import { BGA_PROD_HOST_URL } from "@/constants";
 
 export const metadata: Metadata = {
   title: "Blockchain for Good",
@@ -39,7 +40,7 @@ export const metadata: Metadata = {
     title: "Blockchain for Good Alliance",
     description:
       "At Blockchain for Good Alliance (BGA), we believe in the transformative potential of blockchain technology to address some of the most pressing challenges facing our society.  Our alliance serves as a collaborative hub, bringing together a diverse range of stakeholders to collectively explore, innovate and implement blockchain solutions for social good.",
-    url: "https://www.blockchainforgood.xyz/",
+    url: BGA_PROD_HOST_URL,
     siteName: "Blockchain for Good",
     images: [
       {

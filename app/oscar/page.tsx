@@ -1,13 +1,14 @@
 import { Metadata } from "next";
 import ShareBgImage from "@/assets/oscar/share-bg.jpeg";
 import { OscarWrapper } from "./wrapper";
+import { BGA_PROD_HOST_URL } from "@/constants";
 
 export default function Oscar() {
   return <OscarWrapper />;
 }
 
 export async function generateMetadata(): Promise<Metadata> {
-  const coverImage = "https://www.blockchainforgood.xyz" + ShareBgImage.src;
+  const coverImage = BGA_PROD_HOST_URL + ShareBgImage.src;
   const name = "BGA Oscar";
   const desc =
     "Discover Blockchain for Good Alliance (BGA) and our mission to leverage blockchain technology for social impact. Join our web3 Oscar (BGA Oscar).";
@@ -31,7 +32,7 @@ export async function generateMetadata(): Promise<Metadata> {
     openGraph: {
       title: name,
       description: desc,
-      url: "https://www.blockchainforgood.xyz/oscar",
+      url: `${BGA_PROD_HOST_URL}/oscar`,
       images: [
         {
           url: coverImage,

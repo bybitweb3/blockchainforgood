@@ -1,5 +1,5 @@
 import { getNewsDetail, updateNewsViews } from "../../api";
-import { IMAGE_URL } from "@/constants";
+import { BGA_PROD_HOST_URL, IMAGE_URL } from "@/constants";
 import { GoBack } from "./back";
 import { Metadata } from "next";
 import { Content } from "./content";
@@ -40,7 +40,7 @@ export async function generateMetadata({ params }: IProps): Promise<Metadata> {
     openGraph: {
       title: name,
       description: intro,
-      url: "https://www.blockchainforgood.xyz/news/detail/" + id,
+      url: `${BGA_PROD_HOST_URL}/news/detail/` + id,
       images: [
         {
           url: coverImage,

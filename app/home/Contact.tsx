@@ -7,11 +7,12 @@ import X from "@/assets/X.svg";
 import Image from "next/image";
 import { useIntersectionObserver } from "@/hooks/useIntersectionObserver";
 import styles from "./styles.module.css";
+import { BGA_EMAIL } from "@/constants";
 
 export const Contact = () => {
   const [subject, setSubject] = useState("");
   const [bodytext, setBodyText] = useState("");
-  const email = "hello@blockchainforgood.xyz";
+  const email = BGA_EMAIL;
 
   const ref = useIntersectionObserver<HTMLDivElement>(styles.moveFromBottom);
 

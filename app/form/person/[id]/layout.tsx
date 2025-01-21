@@ -1,4 +1,4 @@
-import { OSCAR_EVENT_ID, OSCAR_HACKTHON_EVENT_ID } from "@/constants";
+import { BGA_PROD_HOST_URL, OSCAR_EVENT_ID, OSCAR_HACKTHON_EVENT_ID } from "@/constants";
 import { Metadata } from "next";
 import ShareBgImage from "@/assets/oscar/form-share.jpeg";
 
@@ -18,7 +18,7 @@ export async function generateMetadata({ params }: IProps): Promise<Metadata> {
   // if (id !== OSCAR_HACKTHON_EVENT_ID && id === OSCAR_EVENT_ID) {
   //   return null;
   // }
-  const coverImage = "https://www.blockchainforgood.xyz" + ShareBgImage.src;
+  const coverImage = BGA_PROD_HOST_URL + ShareBgImage.src;
   const name = "Blockchain for Good";
   const description =
     "Discover Blockchain for Good Alliance (BGA) and our mission to leverage blockchain technology for social impact. Join us to explore, innovate, and implement blockchain solutions for societal challenges.";
@@ -39,7 +39,7 @@ export async function generateMetadata({ params }: IProps): Promise<Metadata> {
     openGraph: {
       title: name,
       description: description,
-      url: "https://www.blockchainforgood.xyz/oscar",
+      url: `${BGA_PROD_HOST_URL}/oscar`,
       images: [
         {
           url: coverImage,
