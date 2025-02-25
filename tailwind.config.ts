@@ -43,6 +43,10 @@ const config = {
         content: "1232px",
         page: "800px",
       },
+      maxWidth: {
+        content: "1232px",
+        desktop: "1400px",
+      },
       colors: {
         main: "hsl(var(--main))",
         turqoise: "hsl(var(--main))",

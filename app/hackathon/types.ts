@@ -1,4 +1,9 @@
-import { EventsRoleValue, OrganizationEntity, TagEntity, UserEntity } from "../square/types";
+import {
+  EventsRoleValue,
+  OrganizationEntity,
+  TagEntity,
+  UserEntity,
+} from "../square/types";
 
 export type EventsEntity = {
   approve: number; // 是否审核通过
@@ -30,7 +35,7 @@ export type EventsEntity = {
   eventApproves: EventsApproveEntity[]; // undefined
   scoreForms: any[]; // ScoreFormsEntity
   updateDate: string; // 更新时间
-}
+};
 export type EventsApproveEntity = {
   approve: number; // 是否审核通过
   id: string; // id
@@ -46,39 +51,39 @@ export type EventsApproveEntity = {
   referer: string; // referer 谁邀请来参加这个活动或报名的
   updateDate: string; // 更新时间
   auditDate: string; // 审核时间
-}
+};
 export enum IEventClassValue {
-MOLEDAO = 0,
-SUPPORT = 1,
-OTHER = 2,
-BGA = 3,
+  MOLEDAO = 0,
+  SUPPORT = 1,
+  OTHER = 2,
+  BGA = 3,
 }
 export enum ApproveValue {
-/** 未审核 */
-NOT_SUBMITTED = 0,
-/** 批准 */
-APPROVED = 1,
-/** 拒绝 */
-REJECTED = 2,
-/* 已提交 */
-SUBMITTED = 3
+  /** 未审核 */
+  NOT_SUBMITTED = 0,
+  /** 批准 */
+  APPROVED = 1,
+  /** 拒绝 */
+  REJECTED = 2,
+  /* 已提交 */
+  SUBMITTED = 3,
 }
 export enum EventsCategoryValue {
-/** 教育 */
-LEARNER = 1,
-/** 工作 */
-CAREER = 2,
-/** 黑客松 */
-HACKTHON = 3,
-/** demoday */
-DEMODAY = 4,
-/** workshop */
-WORKSHOP = 5,
-/** spotlight */
-SPOTLIGHT = 6,
-/** starter */
-STARTER = 7,
-/** 推特 space */
-TWITTER_SPACE = 8,
-EVENT = 9,
+  /** 教育 */
+  LEARNER = 1,
+  /** 工作 */
+  CAREER = 2,
+  /** 黑客松 */
+  HACKTHON = 3,
+  /** demoday */
+  DEMODAY = 4,
+  /** workshop */
+  WORKSHOP = 5,
+  /** spotlight */
+  SPOTLIGHT = 6,
+  /** starter */
+  STARTER = 7,
+  /** 推特 space */
+  TWITTER_SPACE = 8,
+  EVENT = 9,
 }

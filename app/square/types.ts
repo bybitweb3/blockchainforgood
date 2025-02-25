@@ -1,4 +1,4 @@
-import { SocialLinksEntity } from "@/hooks"
+import { SocialLinksEntity } from "@/hooks";
 
 export enum ApproveValue {
   /** 未审核 */
@@ -8,21 +8,31 @@ export enum ApproveValue {
   /** 拒绝 */
   REJECTED = 2,
   /* 已提交 */
-  SUBMITTED = 3
+  SUBMITTED = 3,
 }
 export enum EventsRoleValue {
-  /** 项目/组织 */
+  /** 合作伙伴 */
+  PARTNER = 1,
+  /** 项目 */
   PROJECT = 2,
   /** 个人 */
-  PERSONAL = 3
+  PERSONAL = 3,
+  /* 评委 */
+  JUDGE = 4,
+  /* 主办方 */
+  HOST = 5,
+  /* 获奖组织 */
+  RESULT_ORG = 6,
+  /* 获奖用户 */
+  RESULT_USER = 7,
 }
 
 export interface IGetListParams {
-  approve: ApproveValue
-  events: string
-  roleType: EventsRoleValue,
-  current: number
-  pageSize?: number
+  approve: ApproveValue;
+  events: string;
+  roleType: EventsRoleValue;
+  current: number;
+  pageSize?: number;
 }
 
 export type TagEntity = {
@@ -31,7 +41,7 @@ export type TagEntity = {
   name: string; // 名称
   pages: string; // 标签可用于哪些页面
   updateDate: string; // 更新时间
-}
+};
 
 export type OrganizationEntity = {
   approve: number; // 是否审核通过
@@ -46,13 +56,13 @@ export type OrganizationEntity = {
   tags: TagEntity[]; // undefined
   createDate: string; // 创建时间
   updateDate: string; // 更新时间
-  type: 0  | 1 | 2;
+  type: 0 | 1 | 2;
   links?: SocialLinksEntity[]; // undefined
   email: {
-    email: string
-  }
-  location: string
-}
+    email: string;
+  };
+  location: string;
+};
 export type UserEntity = {
   id: string; // id
   address: string; // 钱包地址
@@ -65,13 +75,13 @@ export type UserEntity = {
   tags: TagEntity[]; // undefined
   createDate: string; // 创建时间
   updateDate: string; // 更新时间
-}
+};
 
 export type EventsApproveEntity = {
   approve: number; // 是否审核通过
   id: string; // id
   reason: string; // reason
-  diyform: string; // diyform 
+  diyform: string; // diyform
   diyimage: string;
   checkin: any; // checkin
   type: EventsRoleValue; // 参与类别
@@ -81,10 +91,10 @@ export type EventsApproveEntity = {
   referer: string; // referer 谁邀请来参加这个活动或报名的
   updateDate: string; // 更新时间
   auditDate: string; // 审核时间
-}
+};
 
 export enum TabItem {
-  ADVISORS = 'Advisors',
-  PARTNERS = 'Partners',
-  PROJECTS = 'Projects'
+  ADVISORS = "Advisors",
+  PARTNERS = "Partners",
+  PROJECTS = "Projects",
 }

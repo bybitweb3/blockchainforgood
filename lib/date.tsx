@@ -8,9 +8,13 @@ dayjs.extend(utc);
 dayjs.extend(timezone);
 
 export function formatPostDate(utcTime: string) {
-  return dayjs.utc(utcTime).local().fromNow();
+  return getUTCTime(utcTime).fromNow();
 }
 
 export function formatPublishDate(utcTime: string) {
-  return dayjs.utc(utcTime).local().format("MMMM D, YYYY");
+  return getUTCTime(utcTime).format("MMMM D, YYYY");
+}
+
+export function getUTCTime(utcTime: string | number) {
+  return dayjs.utc(utcTime).local();
 }

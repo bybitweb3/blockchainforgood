@@ -24,7 +24,7 @@ export const InfiniteMovingCards = ({
   const scrollerRef = React.useRef<HTMLUListElement>(null);
 
   useEffect(() => {
-    addAnimation();
+    // addAnimation();
   }, []);
 
   const [start, setStart] = useState(false);
@@ -80,8 +80,8 @@ export const InfiniteMovingCards = ({
         className
       )}
     >
-      <ul
-        ref={scrollerRef}
+      <div
+        // ref={scrollerRef}
         className={cn(
           "flex min-w-full shrink-0 gap-4 w-max flex-nowrap",
           start && "animate-scroll",
@@ -91,7 +91,7 @@ export const InfiniteMovingCards = ({
         )}
       >
         {children}
-      </ul>
+      </div>
     </div>
   );
 };
