@@ -7,9 +7,7 @@ import Image from "next/image";
 import LocationImage from "@/assets/location.png";
 import { SkeletonList } from "./skeleton";
 import { cn } from "@/lib";
-import { useRouter } from "next-nprogress-bar";
-import { parseAssets } from "../utils";
-import { motion } from "motion/react";
+import { useMemo } from "react";
 
 export function List() {
   const {
@@ -60,19 +58,8 @@ function HackathonItem({
 
   const isHalfImage = assetsList.length === 1;
 
-  const router = useRouter();
-
   return (
-    <motion.div
-      className={cn("mx-4 md:mx-0 cursor-pointer", className)}
-      onClick={() => {
-        router.push(`/hackathon/${item.id}`);
-      }}
-      initial={{ opacity: 0, y: 50 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.1 }}
-      transition={{ duration: 0.6, ease: "easeIn" }}
-    >
+    <div className={cn("mx-4 md:mx-0", className)}>
       <p className="flex text-base items-center text-main gap-1 font-semibold truncate ">
         <Image
           alt="location w-8 h-8"
@@ -110,6 +97,15 @@ function HackathonItem({
           />
         ))}
       </div>
-    </motion.div>
+    </div>
   );
+}
+
+function parseAssets(assets: string) {
+  if (!assets) return [];
+  try {
+    return JSON.parse(assets);
+  } catch (error) {
+    return [assets];
+  }
 }

@@ -68,20 +68,3 @@ export const useGetLink = (links: SocialLinksEntity[]) => {
     }
   }, []);
 };
-
-export const useGithubLink = (links?: SocialLinksEntity[], prefix?: string) => {
-  const parse = (links?: SocialLinksEntity[], prefix?: string) => {
-    return links?.reduce((pre: any, next: any) => {
-      const newPrefix = prefix || "";
-      const key = (SocialLinksEnumValue as any)[next?.type]?.text;
-      return {
-        ...pre,
-        [`${newPrefix}${key}`]: next?.link,
-        [`${newPrefix}${key}Switch`]: next?.show,
-      };
-    }, {});
-  };
-  const linkMap = parse(links, prefix);
-
-  return linkMap?.[SocialLinksEnumValue[SocialLinksEnum.GITHUB].text];
-};

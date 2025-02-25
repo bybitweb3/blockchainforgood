@@ -42,6 +42,7 @@ export const Sponsors = () => {
   const ref = useIntersectionObserver<HTMLDivElement>(
     homeStyles.moveFromBottom
   );
+
   return (
     <div
       id="partner"
