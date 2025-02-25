@@ -21,5 +21,4 @@ export const ROUTER_PATH = {
   OSCAR_CEREMONY: "/oscar-ceremony",
   PROJECT: "/project/",
   VOTING: "/voting",
-  JOINT_FUND: "/joint-fund",
 };
