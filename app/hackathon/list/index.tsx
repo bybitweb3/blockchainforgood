@@ -1,5 +1,7 @@
 import { List } from "./list";
 import { Form } from "./form";
+import { Suspense } from "react";
+import { Loading } from "@/components/Loading";
 
 export function HackathonList() {
   return (
