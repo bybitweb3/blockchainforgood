@@ -37,7 +37,8 @@ export const FAQItem = ({
             color?.question || "text-black"
           }`}
         >
-          {index}. {question}
+          {!!index && <span>{index}. </span>}
+          {question}
         </h3>
         <ChevronDown
           className={cn(
@@ -55,7 +56,7 @@ export const FAQItem = ({
           maxHeight: isOpen ? (mobile ? 500 : 200) : 0,
         }}
       >
-        <div className={`pb-4 ${color?.question || "text-typography"}`}>
+        <div className={`pb-4 ${color?.answer || "text-typography"}`}>
           <p dangerouslySetInnerHTML={{ __html: answer }} />
         </div>
       </div>
