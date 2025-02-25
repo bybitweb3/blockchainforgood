@@ -18,10 +18,6 @@ import {
 
 const menuNavs = [
   {
-    name: "Oscar",
-    route: ROUTER_PATH.OSCAR,
-  },
-  {
     name: "Programme",
     children: [
       {
@@ -31,6 +27,10 @@ const menuNavs = [
       {
         name: "Incubation",
         route: ROUTER_PATH.INCUBATION,
+      },
+      {
+        name: "Oscar",
+        route: ROUTER_PATH.OSCAR,
       },
     ],
   },
