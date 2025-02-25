@@ -72,7 +72,7 @@ export function APIGetVoteResult(params: IVoteResultParams) {
     http.get(API_PATH.GET_VOTE_RESULT, {
       params,
       headers: {
-        "Cache-Control": "max-age=10",
+        "Cache-Control": "no-cache",
       },
     })
   );
