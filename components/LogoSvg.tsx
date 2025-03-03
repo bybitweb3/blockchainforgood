@@ -1,5 +1,7 @@
 import { CSSProperties, forwardRef } from "react";
 import Image, { ImageProps } from "next/image";
+import LIGHT_PNG from "@/assets/logo/BGALogoPrimary.png"
+import DARK_PNG from "@/assets/logo/BGALogoPrimaryRev.png"
 
 export const LogoSvg = forwardRef<
   SVGSVGElement,
@@ -133,8 +135,9 @@ export const LogoSvg = forwardRef<
   }
 );
 
-const DARK_PNG = "/bga/BGA Logo Primary Rev.png";
-const LIGHT_PNG = "/bga/BGA Logo Primary.png";
+// const DARK_PNG = "/bga/BGA Logo Primary Rev.png";
+// const LIGHT_PNG = "/bga/BGA Logo Primary.png";
+
 export const LogoPNG = ({
   isDark,
   ...props
